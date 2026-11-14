@@ -4,40 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy Policy for Clear the Arrows: Tap Puzzle by Rizu Apps.">
+  <meta name="robots" content="index, follow">
+  <meta name="description"
+        content="Privacy Policy for Clear the Arrows: Tap Puzzle by Rizu Apps.">
   <title>Privacy Policy | Clear the Arrows</title>
+
   <style>
     :root {
       color-scheme: dark;
       --bg: #101421;
+      --header: #182236;
       --card: #1b2436;
       --text: #eef3fc;
       --muted: #adb9cd;
       --accent: #69c4ff;
       --border: #344056;
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 16px/1.7 system-ui, -apple-system, sans-serif;
+      font: 16px/1.7 system-ui, -apple-system,
+            BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     header {
-      padding: 32px 20px;
-      text-align: center;
-      background: #182236;
+      background: var(--header);
       border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 20px;
     }
+
     .brand {
+      color: var(--accent);
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: var(--accent);
     }
-    h1 { font-size: clamp(28px, 5vw, 40px); }
-    h2 { font-size: 21px; margin-top: 0; }
-    main { max-width: 800px; margin: 32px auto; padding: 0 18px; }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.2;
+      margin: 14px 0 10px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Navigation: no underlines except on hover */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-top: 20px;
+    }
+
+    nav a,
+    nav a:visited {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    nav a:hover {
+      color: #a1ddff;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    nav a[aria-current="page"],
+    nav a[aria-current="page"]:visited {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 5px;
+      border-radius: 3px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 32px auto;
+      padding: 0 18px;
+    }
+
     section {
       background: var(--card);
       border: 1px solid var(--border);
@@ -45,411 +107,516 @@
       padding: 24px;
       margin: 18px 0;
     }
-    p, li { color: var(--muted); }
-    strong { color: var(--text); }
-    a { color: var(--accent); }
-    nav a { margin: 0 10px; }
-    footer { padding: 30px; text-align: center; color: var(--muted); }
-    @media (max-width: 480px) {
-      section { padding: 18px; }
+
+    h2 {
+      font-size: 21px;
+      line-height: 1.35;
+      margin-top: 0;
     }
-    
-/* Clean navigation styling */
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  margin-top: 20px;
-}
 
-nav a,
-nav a:visited {
-  color: #69c4ff;
-  text-decoration: none;
-  font-weight: 500;
-}
+    p, li {
+      color: var(--muted);
+    }
 
-nav a:hover {
-  color: #a1ddff;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
+    li {
+      margin-bottom: 9px;
+    }
 
-nav a[aria-current="page"],
-nav a[aria-current="page"]:visited {
-  color: #eef3fc;
-  font-weight: 700;
-  text-decoration: none;
-}
+    strong {
+      color: var(--text);
+    }
 
-nav a:focus-visible {
-  outline: 2px solid #69c4ff;
-  outline-offset: 5px;
-  border-radius: 3px;
-}
+    main a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
 
+    .date {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 22px;
+    }
+
+    footer {
+      color: var(--muted);
+      text-align: center;
+      padding: 30px 18px;
+      font-size: 14px;
+    }
+
+    footer nav {
+      margin-top: 14px;
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 26px 16px; }
+      main { margin: 20px auto; }
+      section { padding: 18px; }
+      nav { gap: 12px 16px; }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="brand">RIZU APPS</div>
-    <h1>Privacy Policy</h1>
-    <p>Clear the Arrows: Tap Puzzle</p>
-  
-<nav aria-label="Website navigation">
-  <a href="./index.html">Account Deletion</a>
-  <a href="./privacy.html">Privacy Policy</a>
-  <a href="./terms-of-service.html">Terms of Service</a>
-</nav>
 
-  </header>
+<header>
+  <div class="brand">RIZU APPS</div>
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Clear the Arrows: Tap Puzzle</p>
 
-  <main>
-    <p>Effective date: November 13, 2026</p>
+  <nav aria-label="Website navigation">
+    <a href="./index.html">Account Deletion</a>
+    <a href="./privacy.html" aria-current="page">
+      Privacy Policy
+    </a>
+    <a href="./terms-of-service.html">
+      Terms of Service
+    </a>
+  </nav>
+</header>
 
-    <section>
-      <h2>1. Introduction</h2>
-      <p>
-        Rizu Apps ("we", "us" or "our") publishes
-        Clear the Arrows: Tap Puzzle
-        (Android package: com.tangleclear.app).
-      </p>
-      <p>
-        This Privacy Policy explains how information is
-        processed when you play our game, sign in,
-        save progress, view advertisements, or contact us.
-      </p>
-    </section>
+<main>
 
-    <section>
-      <h2>2. Information We Process</h2>
-      <p>
-        Depending on which game features you use,
-        the following information may be processed:
-      </p>
-      <ul>
-        <li>
-          <strong>Account information:</strong>
-          Google Sign-In identifier, email address,
-          and available profile information used
-          for authentication and account management.
-        </li>
-        <li>
-          <strong>Game progress:</strong>
-          Completed levels and associated account-based
-          progress stored using Firebase.
-        </li>
-        <li>
-          <strong>Local game information:</strong>
-          Preferences, progress or other game state
-          saved on your device using browser-based
-          local storage.
-        </li>
-        <li>
-          <strong>Advertising information:</strong>
-          IP address, approximate location inferred
-          from IP address, device or advertising
-          identifiers, and ad interaction information
-          processed by Google AdMob.
-        </li>
-        <li>
-          <strong>Technical information:</strong>
-          App interaction and diagnostic information
-          processed by the advertising SDK.
-        </li>
-        <li>
-          <strong>Support communications:</strong>
-          Information you choose to provide when
-          emailing us about support or deletion.
-        </li>
-      </ul>
-    </section>
+  <p class="date">Effective date: November 14, 2026</p>
 
-    <section>
-      <h2>3. Google Sign-In and Firebase</h2>
-      <p>
-        Clear the Arrows uses Google Sign-In and
-        Firebase Authentication to identify
-        signed-in players.
-      </p>
-      <p>
-        Firebase Cloud Firestore is used to store
-        account-associated game progress.
-        This helps players restore completed levels
-        and continue playing after signing in again.
-      </p>
-      <p>
-        Google and Firebase process information
-        under their applicable service and privacy
-        policies.
-      </p>
-      <p>
-        Learn more:
-        <a href="https://policies.google.com/privacy">
-          Google Privacy Policy
-        </a>
-        and
-        <a href="https://firebase.google.com/support/privacy">
-          Firebase Privacy and Security
-        </a>.
-      </p>
-    </section>
+  <section>
+    <h2>1. Introduction</h2>
+    <p>
+      Clear the Arrows: Tap Puzzle is an Android
+      puzzle game published by Rizu Apps,
+      a personal developer name.
+    </p>
+    <p>
+      This Privacy Policy explains how information
+      may be collected, used, stored and shared
+      when you use our game and related services.
+    </p>
+    <p>
+      Android package:
+      <strong>com.tangleclear.app</strong>
+    </p>
+    <p>
+      Privacy contact:
+      <a href="mailto:rizwanliaqat1@gmail.com">
+        rizwanliaqat1@gmail.com
+      </a>
+    </p>
+  </section>
 
-    <section>
-      <h2>4. Local Storage</h2>
-      <p>
-        The game may store information locally
-        on your device to support gameplay,
-        preferences and saved state.
-      </p>
-      <p>
-        This information is generally retained on
-        the device until changed or cleared.
-        Clearing app data or uninstalling the game
-        may remove locally stored information.
-      </p>
-      <p>
-        Local storage is separate from cloud data
-        associated with a signed-in account.
-      </p>
-    </section>
+  <section>
+    <h2>2. Information We Process</h2>
+    <p>
+      Depending on how you use the game,
+      the following information may be processed:
+    </p>
 
-    <section>
-      <h2>5. Advertising and AdMob</h2>
-      <p>
-        Clear the Arrows uses Google AdMob to
-        display banner, interstitial and
-        rewarded advertisements.
-      </p>
-      <p>
-        Google Mobile Ads SDK may automatically
-        collect and share information such as:
-      </p>
-      <ul>
-        <li>IP addresses and inferred approximate location</li>
-        <li>Advertising IDs and other device identifiers</li>
-        <li>App launches, taps and ad interactions</li>
-        <li>Technical and diagnostic information</li>
-      </ul>
-      <p>
-        Google uses this information for advertising,
-        measurement, analytics, security and
-        fraud prevention, subject to applicable
-        settings and policies.
-      </p>
-      <p>
-        Learn more:
-        <a href="https://policies.google.com/technologies/ads">
-          Google Advertising Technologies
-        </a>.
-      </p>
-    </section>
+    <ul>
+      <li>
+        <strong>Account information:</strong>
+        A unique account identifier, email address,
+        display name and other profile information
+        made available through Google Sign-In.
+      </li>
 
-    <section>
-      <h2>6. Advertising Consent and Choices</h2>
-      <p>
-        Where required, the game presents
-        advertising consent options using
-        Google's User Messaging Platform.
-      </p>
-      <p>
-        Eligible players can review or update
-        their advertising privacy preferences
-        using the game's Ad Privacy Options feature.
-      </p>
-      <p>
-        Declining personalized advertising does
-        not necessarily mean that all advertising
-        will stop. Limited or non-personalized
-        advertising may still be permitted,
-        depending on applicable requirements.
-      </p>
-      <p>
-        Android also provides controls for
-        advertising identifiers and
-        related privacy settings.
-      </p>
-    </section>
+      <li>
+        <strong>Saved game progress:</strong>
+        Completed levels and account-linked
+        progress stored using Firebase.
+      </li>
 
-    <section>
-      <h2>7. Why Information Is Used</h2>
-      <ul>
-        <li>To authenticate players and manage accounts</li>
-        <li>To store and restore completed game progress</li>
-        <li>To provide and maintain game functionality</li>
-        <li>To display and measure advertising</li>
-        <li>To detect abuse and protect services</li>
-        <li>To respond to support and deletion requests</li>
-      </ul>
-    </section>
+      <li>
+        <strong>Local game information:</strong>
+        Game settings, preferences and progress
+        stored on your device.
+      </li>
 
-    <section>
-      <h2>8. Service Providers and Data Sharing</h2>
-      <p>
-        We use Google services including
-        Firebase Authentication, Cloud Firestore,
-        Google Sign-In and Google AdMob.
-      </p>
-      <p>
-        These providers process information to
-        deliver their services. AdMob may also
-        share information within its advertising
-        ecosystem as described in Google's policies.
-      </p>
-      <p>
-        Information may also be disclosed when
-        legally required or necessary to
-        protect the security of the service.
-      </p>
-    </section>
+      <li>
+        <strong>Advertising information:</strong>
+        IP addresses, approximate location
+        inferred from IP address, advertising
+        identifiers, device identifiers and
+        advertisement interactions.
+      </li>
 
-    <section>
-      <h2>9. Security</h2>
-      <p>
-        We use Firebase security rules and
-        account-based access controls to help
-        protect cloud-saved game information.
-      </p>
-      <p>
-        Google Firebase and AdMob services use
-        secure network transport for their
-        normal service communications.
-      </p>
-      <p>
-        No storage or transmission system
-        can guarantee absolute security.
-      </p>
-    </section>
+      <li>
+        <strong>Technical and diagnostic information:</strong>
+        App interactions and diagnostic data
+        processed by advertising services.
+      </li>
 
-    <section>
-      <h2>10. Retention and Deletion</h2>
-      <p>
-        Cloud account information and saved
-        progress are retained as needed to
-        support the account and game services.
-      </p>
-      <p>
-        You can request deletion of your
-        Clear the Arrows account and associated
-        saved progress using our
-        <a href="./index.html">Account Deletion page</a>.
-      </p>
-      <p>
-        Requests may require identity verification.
-        Submission of a request does not itself
-        establish that all backend data has
-        already been deleted.
-      </p>
-      <p>
-        We communicate deletion progress through
-        the support process. We have not yet
-        established a fixed published processing
-        deadline.
-      </p>
-      <p>
-        Limited information may be retained where
-        legally required or justified for security,
-        fraud prevention or request handling.
-        Google and advertising providers may apply
-        their own retention schedules.
-      </p>
-      <!-- REVIEW BEFORE PUBLICATION:
-           Confirm exact deletion workflow, supported
-           data categories, completion timeline and
-           any retention periods or legal exceptions. -->
-    </section>
+      <li>
+        <strong>Support information:</strong>
+        Email messages and information voluntarily
+        submitted when requesting assistance
+        or account deletion.
+      </li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>11. Children's Privacy</h2>
-      <p>
-        Advertising and data protection settings
-        may differ for children and younger users.
-        We aim to follow applicable requirements
-        when configuring game advertising and
-        privacy controls.
-      </p>
-      <p>
-        Parents or guardians may contact us
-        to ask about information associated
-        with a child's account.
-      </p>
-      <!-- REVIEW BEFORE PUBLICATION:
-           Confirm actual Google Play target audience,
-           age restrictions and AdMob child-directed
-           treatment settings. -->
-    </section>
+  <section>
+    <h2>3. Google Sign-In and Firebase</h2>
+    <p>
+      The game supports Google Sign-In through
+      Firebase Authentication.
+    </p>
+    <p>
+      Firebase Cloud Firestore is used to store
+      account-associated game progress, helping
+      signed-in players restore completed levels.
+    </p>
+    <p>
+      Google and Firebase process information
+      in accordance with their applicable
+      privacy policies and service terms.
+    </p>
+    <p>
+      Learn more:
+      <a href="https://policies.google.com/privacy">
+        Google Privacy Policy
+      </a>
+      and
+      <a href="https://firebase.google.com/support/privacy">
+        Firebase Privacy and Security
+      </a>.
+    </p>
+  </section>
 
-    <section>
-      <h2>12. Your Privacy Choices</h2>
-      <p>
-        You may contact Rizu Apps to request
-        information about your account data,
-        ask for deletion, or raise concerns
-        about data handling.
-      </p>
-      <p>
-        Players may also manage their
-        Google account privacy settings
-        and applicable advertising preferences.
-      </p>
-      <p>
-        Rights and available remedies depend on
-        the laws that apply to your location.
-      </p>
-    </section>
+  <section>
+    <h2>4. Local Storage</h2>
+    <p>
+      Clear the Arrows uses local device storage
+      for certain gameplay settings,
+      progress information and preferences.
+    </p>
+    <p>
+      Local information may remain on your
+      device until it is changed, cleared,
+      or removed with the application's data.
+    </p>
+    <p>
+      Clearing local data does not necessarily
+      delete information saved to your
+      signed-in cloud account.
+    </p>
+  </section>
 
-    <section>
-      <h2>13. International Processing</h2>
-      <p>
-        Google Firebase and advertising services
-        may process information using infrastructure
-        located in different countries.
-        Applicable provider protections and
-        data-processing terms govern such transfers.
-      </p>
-    </section>
+  <section>
+    <h2>5. Advertising and Google AdMob</h2>
+    <p>
+      Clear the Arrows is currently free
+      to play and supported by advertisements.
+    </p>
+    <p>
+      The game uses Google AdMob to provide
+      banner, interstitial and optional
+      rewarded advertisements.
+    </p>
+    <p>
+      Google's Mobile Ads SDK may automatically
+      collect and share information including:
+    </p>
+    <ul>
+      <li>
+        IP address and approximate
+        location derived from it.
+      </li>
+      <li>
+        Advertising identifiers and
+        other device or account identifiers.
+      </li>
+      <li>
+        App launches, taps, advertisement
+        views and related interactions.
+      </li>
+      <li>
+        Technical and diagnostic information
+        such as performance indicators.
+      </li>
+    </ul>
+    <p>
+      Such information may be used for advertising,
+      measurement, analytics, security and
+      fraud prevention.
+    </p>
+    <p>
+      For more information, see
+      <a href="https://policies.google.com/technologies/ads">
+        Google's Advertising Technologies Policy
+      </a>.
+    </p>
+  </section>
 
-    <section>
-      <h2>14. Policy Updates</h2>
-      <p>
-        We may update this Privacy Policy
-        to reflect changes to the game,
-        service providers or legal requirements.
-      </p>
-      <p>
-        The effective date on this page
-        will be updated when material
-        changes are published.
-      </p>
-    </section>
+  <section>
+    <h2>6. Advertising Consent and Choices</h2>
+    <p>
+      Where required by applicable rules,
+      Clear the Arrows presents advertising
+      consent options using Google's
+      User Messaging Platform.
+    </p>
+    <p>
+      Eligible players can review or update
+      their choices through the game's
+      Ad Privacy Options feature.
+    </p>
+    <p>
+      Choosing not to consent to personalized
+      advertisements does not necessarily
+      prevent all advertisements from appearing.
+    </p>
+    <p>
+      Android device settings may also
+      provide controls for advertising
+      identifiers and related privacy options.
+    </p>
+  </section>
 
-    <section>
-      <h2>15. Contact</h2>
-      <p>
-        <strong>Rizu Apps</strong><br>
-        Clear the Arrows: Tap Puzzle<br>
-        Package: com.tangleclear.app
-      </p>
-      <p>
-        Privacy and account deletion email:
-        <a href="mailto:rizwanliaqat1@gmail.com">
-          rizwanliaqat1@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="./index.html">
-          Request Account Deletion
-        </a>
-      </p>
-    </section>
-  </main>
+  <section>
+    <h2>7. How We Use Information</h2>
+    <p>
+      Information is processed for purposes
+      including:
+    </p>
+    <ul>
+      <li>Authenticating players and managing accounts.</li>
+      <li>Saving and restoring completed levels.</li>
+      <li>Supporting gameplay and game functionality.</li>
+      <li>Displaying and measuring advertisements.</li>
+      <li>Maintaining service security and preventing abuse.</li>
+      <li>Responding to support and deletion requests.</li>
+    </ul>
+  </section>
 
-  <footer>
-    <p>&copy; 2026 Rizu Apps. All rights reserved.</p>
-    <a href="./index.html">Account Deletion</a> |
-    <a href="./privacy.html">Privacy Policy</a>
-  </footer>
+  <section>
+    <h2>8. Service Providers and Data Sharing</h2>
+    <p>
+      The game relies on third-party services
+      including Google Sign-In, Firebase
+      Authentication, Cloud Firestore
+      and Google AdMob.
+    </p>
+    <p>
+      These providers may process information
+      necessary to deliver authentication,
+      cloud saving and advertising services.
+    </p>
+    <p>
+      AdMob may share information within
+      Google's advertising ecosystem and
+      with participating advertising partners
+      as described in Google's policies.
+    </p>
+    <p>
+      Information may also be disclosed
+      when legally required or necessary
+      to protect users and services.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Data Security</h2>
+    <p>
+      We use account-based access controls
+      and Firebase security rules to help
+      protect account-associated game data.
+    </p>
+    <p>
+      Firebase and Google advertising
+      services use encrypted network
+      transport for normal service
+      communications.
+    </p>
+    <p>
+      Despite reasonable protections,
+      no online service or storage system
+      can guarantee absolute security.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Data Retention</h2>
+    <p>
+      Account information and cloud-saved
+      progress are retained as needed
+      to provide account-related game services.
+    </p>
+    <p>
+      Data associated with an account
+      is subject to the deletion
+      procedures described below.
+    </p>
+    <p>
+      Certain limited records may need
+      to be retained for legally required
+      purposes, security, fraud prevention
+      or documenting deletion requests.
+    </p>
+    <p>
+      We do not currently publish a fixed
+      retention period for every data category.
+      Retention depends on the type
+      of information and its purpose.
+    </p>
+    <p>
+      Third-party providers may have
+      separate data retention practices
+      described in their own policies.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Account and Data Deletion</h2>
+    <p>
+      Players may request deletion of
+      their Clear the Arrows account
+      and associated game data.
+    </p>
+    <p>
+      Requests can be submitted through
+      the game's deletion request
+      feature or through our public
+      Account Deletion webpage.
+    </p>
+    <p>
+      We may verify account ownership
+      before identifying the relevant
+      Firebase Authentication and
+      Cloud Firestore records for deletion.
+    </p>
+    <p>
+      Submission of a deletion request
+      does not by itself confirm that
+      all backend deletion has finished.
+    </p>
+    <p>
+      We communicate the outcome using
+      the support email channel.
+      Legitimate legal or security
+      retention exceptions may apply.
+    </p>
+    <p>
+      <a href="./index.html">
+        Request Account and Data Deletion
+      </a>
+    </p>
+  </section>
+
+  <section>
+    <h2>12. Children's Privacy and Age</h2>
+    <p>
+      Clear the Arrows is intended for
+      players aged 13 years and older,
+      consistent with its declared
+      Google Play target audience.
+    </p>
+    <p>
+      The game is not specifically
+      intended for children under 13.
+    </p>
+    <p>
+      Parents or guardians may contact
+      Rizu Apps about privacy concerns
+      involving a younger user.
+    </p>
+    <p>
+      Where applicable, additional
+      legal age requirements and
+      parental consent rules may apply.
+    </p>
+  </section>
+
+  <section>
+    <h2>13. Your Privacy Rights</h2>
+    <p>
+      You may contact Rizu Apps to
+      request information about your
+      account data, request deletion,
+      or ask questions about privacy.
+    </p>
+    <p>
+      Available rights depend on
+      the laws that apply to you.
+    </p>
+    <p>
+      You may also manage Google
+      account privacy settings
+      and eligible advertising
+      consent preferences.
+    </p>
+  </section>
+
+  <section>
+    <h2>14. International Data Processing</h2>
+    <p>
+      Google Firebase and advertising
+      services may process information
+      using infrastructure located
+      in different countries.
+    </p>
+    <p>
+      Applicable provider policies
+      and data-processing terms
+      govern their handling
+      of such information.
+    </p>
+  </section>
+
+  <section>
+    <h2>15. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy
+      when game features, data practices,
+      third-party services or legal
+      requirements change.
+    </p>
+    <p>
+      The effective date will be
+      updated when a revised
+      policy is published.
+    </p>
+  </section>
+
+  <section>
+    <h2>16. Contact Information</h2>
+    <p>
+      <strong>Developer:</strong> Rizu Apps
+    </p>
+    <p>
+      <strong>Game:</strong> Clear the Arrows: Tap Puzzle
+    </p>
+    <p>
+      <strong>Android package:</strong>
+      com.tangleclear.app
+    </p>
+    <p>
+      <strong>Privacy and support email:</strong>
+      <a href="mailto:rizwanliaqat1@gmail.com">
+        rizwanliaqat1@gmail.com
+      </a>
+    </p>
+    <p>
+      <a href="./index.html">Account Deletion</a>
+      |
+      <a href="./terms-of-service.html">
+        Terms of Service
+      </a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Rizu Apps. All rights reserved.</p>
+  <nav aria-label="Footer navigation">
+    <a href="./index.html">Account Deletion</a>
+    <a href="./privacy.html" aria-current="page">
+      Privacy Policy
+    </a>
+    <a href="./terms-of-service.html">
+      Terms of Service
+    </a>
+  </nav>
+</footer>
+
 </body>
 </html>
