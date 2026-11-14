@@ -53,6 +53,43 @@
     @media (max-width: 480px) {
       section { padding: 18px; }
     }
+    
+/* Clean navigation styling */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 20px;
+}
+
+nav a,
+nav a:visited {
+  color: #69c4ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #a1ddff;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+nav a[aria-current="page"],
+nav a[aria-current="page"]:visited {
+  color: #eef3fc;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a:focus-visible {
+  outline: 2px solid #69c4ff;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
   </style>
 </head>
 <body>
