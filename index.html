@@ -4,40 +4,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Request deletion of your Clear the Arrows account and associated game data.">
-  <title>Account Deletion | Clear the Arrows</title>
+
+  <meta name="description"
+        content="Request deletion of your Clear the Arrows account and associated saved game data. Official account deletion page for Rizu Apps.">
+
+  <meta name="robots" content="index, follow">
+
+  <title>Account &amp; Data Deletion | Clear the Arrows</title>
+
   <style>
     :root {
       color-scheme: dark;
+
       --bg: #101421;
+      --header: #182236;
       --card: #1b2436;
       --text: #eef3fc;
       --muted: #adb9cd;
       --accent: #69c4ff;
       --border: #344056;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font: 16px/1.7 system-ui, -apple-system, sans-serif;
+      font: 16px/1.7 system-ui, -apple-system,
+            BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
     header {
       padding: 32px 20px;
       text-align: center;
-      background: #182236;
+      background: var(--header);
       border-bottom: 1px solid var(--border);
     }
+
     .brand {
+      color: var(--accent);
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: var(--accent);
     }
-    h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.2; }
-    h2 { font-size: 21px; margin-top: 0; }
-    main { max-width: 800px; margin: 32px auto; padding: 0 18px; }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.2;
+      margin: 14px 0 10px;
+    }
+
+    h2 {
+      font-size: 21px;
+      margin-top: 0;
+      line-height: 1.35;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: var(--accent);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav a[aria-current="page"] {
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 32px auto;
+      padding: 0 18px;
+    }
+
     section {
       background: var(--card);
       border: 1px solid var(--border);
@@ -45,9 +110,31 @@
       padding: 24px;
       margin: 18px 0;
     }
-    p, li { color: var(--muted); }
-    strong { color: var(--text); }
-    a { color: var(--accent); }
+
+    p,
+    li {
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
     .button {
       display: inline-block;
       padding: 14px 24px;
@@ -57,174 +144,552 @@
       font-weight: 700;
       text-decoration: none;
       margin: 12px 0;
+      text-align: center;
+      transition: background 0.2s ease;
     }
-    .button:hover { background: #a1ddff; }
-    footer { padding: 30px; text-align: center; color: var(--muted); }
-    nav a { margin: 0 10px; }
+
+    .button:hover {
+      background: #a1ddff;
+    }
+
+    .note {
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      background: rgba(105, 196, 255, 0.07);
+      border-radius: 0 8px 8px 0;
+      color: var(--muted);
+      margin-top: 16px;
+    }
+
+    .note strong {
+      color: var(--text);
+    }
+
+    code {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 30px 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer a {
+      display: inline-block;
+      margin: 4px 8px;
+    }
+
     @media (max-width: 480px) {
-      section { padding: 18px; }
-      .button { display: block; text-align: center; }
+      header {
+        padding: 26px 16px;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      main {
+        margin: 20px auto;
+      }
+
+      nav {
+        gap: 12px 16px;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button {
+        transition: none;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="brand">RIZU APPS</div>
-    <h1>Clear the Arrows</h1>
-    <p>Account &amp; Data Deletion</p>
-    
-<nav aria-label="Website navigation">
-  <a href="./index.html" aria-current="page">Account Deletion</a>
-  <a href="./privacy.html">Privacy Policy</a>
-  <a href="./terms-of-service.html">Terms of Service</a>
-</nav>
 
+    <h1>Clear the Arrows</h1>
+
+    <p class="subtitle">
+      Account &amp; Data Deletion
+    </p>
+
+    <nav aria-label="Website navigation">
+      <a href="./index.html" aria-current="page">
+        Account Deletion
+      </a>
+
+      <a href="./privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="./terms-of-service.html">
+        Terms of Service
+      </a>
+    </nav>
   </header>
 
-  <main>
-    <section>
+  <main id="main-content">
+
+    <!-- ACCOUNT DELETION REQUEST -->
+
+    <section id="request-deletion">
+
       <h2>Request Account Deletion</h2>
+
       <p>
-        If you created a Clear the Arrows account using
-        Google Sign-In, you can request deletion of your
-        account and associated game data at any time.
+        Clear the Arrows: Tap Puzzle is developed
+        and published by Rizu Apps.
       </p>
+
       <p>
-        You can submit a request without opening or
-        reinstalling the game.
+        If you use Google Sign-In to access your
+        Clear the Arrows account, you can request
+        deletion of your game account and its
+        associated saved data.
       </p>
+
+      <p>
+        You can request account deletion at any
+        time without opening, reinstalling, or
+        signing in to the game.
+      </p>
+
       <a class="button"
-         href="mailto:rizwanliaqat1@gmail.com?subject=Clear%20the%20Arrows%20-%20Account%20Deletion%20Request&amp;body=Hello%20Rizu%20Apps%2C%0A%0AI%20request%20deletion%20of%20my%20Clear%20the%20Arrows%20account%20and%20associated%20saved%20progress.%0A%0AMy%20Google%20sign-in%20email%3A%20%0A%0AThank%20you.">
+         href="mailto:rizwanliaqat1@gmail.com?subject=Clear%20the%20Arrows%20-%20Account%20Deletion%20Request&amp;body=Hello%20Rizu%20Apps%2C%0A%0AI%20would%20like%20to%20request%20deletion%20of%20my%20Clear%20the%20Arrows%20game%20account%20and%20associated%20saved%20progress.%0A%0AGoogle%20Sign-In%20email%3A%20%0A%0AThank%20you.">
         Request Account Deletion
       </a>
+
       <p>
-        Or email
-        <a href="mailto:rizwanliaqat1@gmail.com">
-          rizwanliaqat1@gmail.com
-        </a>
-        with the subject
-        <strong>Clear the Arrows - Account Deletion Request</strong>.
+        You can also send an email directly to:
       </p>
+
+      <p>
+        <a href="mailto:rizwanliaqat1@gmail.com">
+          <strong>rizwanliaqat1@gmail.com</strong>
+        </a>
+      </p>
+
+      <p>
+        Email subject:
+        <strong>
+          Clear the Arrows - Account Deletion Request
+        </strong>
+      </p>
+
+      <div class="note">
+        <strong>Important:</strong>
+        If the email button does not open your
+        email application, copy the support email
+        address above and send your request manually.
+      </div>
+
     </section>
 
-    <section>
-      <h2>How to Submit a Request</h2>
+    <!-- REQUEST INSTRUCTIONS -->
+
+    <section id="instructions">
+
+      <h2>How to Submit a Deletion Request</h2>
+
       <ol>
-        <li>Send an email using the button above.</li>
-        <li>Include the email address associated with your Google Sign-In account.</li>
-        <li>State that you want your Clear the Arrows account and associated saved game data deleted.</li>
-        <li>Rizu Apps may request reasonable verification to protect your account against unauthorized deletion.</li>
-        <li>After verification, Rizu Apps will arrange deletion of the applicable account and associated data and communicate the outcome.</li>
+        <li>
+          Email Rizu Apps using the request
+          button or support email address above.
+        </li>
+
+        <li>
+          Include the email address associated
+          with your Google Sign-In account.
+        </li>
+
+        <li>
+          Clearly state that you want your
+          Clear the Arrows account and
+          associated saved game data deleted.
+        </li>
+
+        <li>
+          Rizu Apps may ask for reasonable
+          confirmation of account ownership
+          to prevent unauthorized deletion.
+        </li>
+
+        <li>
+          Once the request has been verified,
+          the account and associated game
+          data will be identified for deletion,
+          subject to any legitimate retention
+          requirements.
+        </li>
+
+        <li>
+          We will communicate the request's
+          outcome through the support email
+          conversation.
+        </li>
       </ol>
-      <p>
-        Never send your Google password, verification codes,
-        or other account credentials.
-      </p>
+
+      <div class="note">
+        <strong>Security notice:</strong>
+        Never send your Google password,
+        verification codes, or other
+        sensitive account credentials.
+      </div>
+
     </section>
 
-    <section>
-      <h2>Delete Your Account From the App</h2>
+    <!-- IN-APP DELETION -->
+
+    <section id="in-app-deletion">
+
+      <h2>Account Deletion Inside the Game</h2>
+
       <p>
-        Clear the Arrows also provides an in-app account
-        deletion request option for signed-in players.
+        Clear the Arrows also includes an
+        in-app account deletion request
+        option for signed-in players.
       </p>
+
       <p>
-        You may use that option or the email method above.
-        You do not need access to the app to send an email request.
+        Players can submit a deletion request
+        through the game or use the email
+        method on this webpage.
       </p>
+
+      <p>
+        The email method remains available
+        even if the player cannot access
+        the game or their device.
+      </p>
+
+      <p>
+        An in-app deletion request may create
+        a request record for processing.
+        Request submission does not by itself
+        guarantee that deletion of all
+        backend records has completed.
+      </p>
+
     </section>
 
-    <section>
-      <h2>What Data Is Covered?</h2>
+    <!-- DATA COVERED -->
+
+    <section id="data-covered">
+
+      <h2>What Data Is Deleted?</h2>
+
       <p>
-        A verified account-deletion request covers
-        the account information and saved progress
-        associated with your Clear the Arrows account.
+        A verified request for deletion of
+        a Clear the Arrows account covers
+        account information and saved
+        game data associated with that account.
       </p>
+
+      <p>
+        The records identified for removal include:
+      </p>
+
       <ul>
-        <li>Firebase Authentication account record for the game</li>
-        <li>Google Sign-In account identifier and related profile information held for the game</li>
-        <li>Cloud-saved game progress associated with the account</li>
-        <li>Associated account-specific Firestore data</li>
+        <li>
+          <strong>Firebase Authentication account:</strong>
+          The account record used for
+          Google Sign-In authentication
+          within Clear the Arrows.
+        </li>
+
+        <li>
+          <strong>Account profile information:</strong>
+          The account identifier, associated
+          email address and any related
+          profile information held by the game.
+        </li>
+
+        <li>
+          <strong>Cloud-saved game progress:</strong>
+          Completed levels and other
+          account-linked saved progress
+          stored in Cloud Firestore.
+        </li>
+
+        <li>
+          <strong>Account-specific Firestore records:</strong>
+          Other account-linked records
+          identified during deletion processing,
+          subject to legitimate retention
+          requirements.
+        </li>
       </ul>
+
       <p>
-        Deleting a Clear the Arrows account does not
-        delete your Google account.
+        Deleting your Clear the Arrows
+        game account does not delete
+        your personal Google account
+        or other Google services.
       </p>
+
       <p>
-        Information independently processed by Google or
-        advertising providers may be subject to their
-        separate retention policies.
+        Information independently processed
+        by Google, Firebase or advertising
+        providers may also be subject to
+        their own privacy and retention policies.
       </p>
+
     </section>
 
-    <section>
+    <!-- PROCESSING AND RETENTION -->
+
+    <section id="retention">
+
       <h2>Deletion Processing and Retention</h2>
+
       <p>
-        Account deletion requests are reviewed to verify
-        account ownership and identify the relevant records.
-        Submission of a request does not itself confirm that
-        backend deletion has finished.
+        Rizu Apps reviews account deletion
+        requests and may verify account
+        ownership before processing them.
       </p>
+
       <p>
-        We will communicate the processing status through
-        the support email conversation. We do not currently
-        publish a fixed completion deadline.
+        We aim to process verified deletion
+        requests promptly, taking account
+        of applicable legal requirements.
       </p>
+
       <p>
-        Some limited information may need to be retained
-        where required for security, fraud prevention,
-        legal compliance, or handling the request itself.
-        Any such retention will be limited to a legitimate
-        purpose and applicable requirements.
+        Processing involves identifying the
+        relevant Firebase Authentication
+        account and associated Cloud Firestore
+        data for deletion.
       </p>
-      <!-- REVIEW BEFORE PUBLICATION:
-           Confirm actual Firebase Auth deletion process,
-           Firestore deletion scope, processing deadline,
-           and any legally required retention periods.
-           Update this section once confirmed. -->
+
+      <p>
+        Sending a request does not mean
+        deletion has already been completed.
+        We will communicate the outcome
+        using the support email channel.
+      </p>
+
+      <p>
+        Limited information may be retained
+        where legitimately necessary for:
+      </p>
+
+      <ul>
+        <li>Compliance with applicable laws</li>
+        <li>Security and fraud prevention</li>
+        <li>Handling or documenting a deletion request</li>
+        <li>Other legitimate retention obligations</li>
+      </ul>
+
+      <p>
+        Any such retention will be limited
+        to the relevant purpose and
+        applicable requirements.
+      </p>
+
+      <p>
+        The exact retention period, where
+        applicable, depends on the category
+        of information and the reason for
+        retaining it.
+      </p>
+
+      <div class="note">
+        <strong>Request status:</strong>
+        If you have already submitted a
+        deletion request and want an update,
+        contact
+        <a href="mailto:rizwanliaqat1@gmail.com">
+          rizwanliaqat1@gmail.com
+        </a>
+        using the same email conversation.
+      </div>
+
     </section>
 
-    <section>
-      <h2>Local Game Data</h2>
+    <!-- LOCAL DATA -->
+
+    <section id="local-data">
+
+      <h2>Locally Stored Game Data</h2>
+
       <p>
-        Some game preferences or progress may be stored
-        locally on your device. Account deletion does not
-        necessarily remove every local copy from a device.
+        Clear the Arrows may store certain
+        game settings, preferences or
+        progress information locally
+        on your Android device.
       </p>
+
       <p>
-        You can clear local app data through Android
-        settings or uninstall the application. Clearing
-        local data is separate from deleting your
-        cloud account.
+        Deleting a cloud account does not
+        necessarily remove every locally
+        stored copy of information from
+        a device that is no longer
+        connected to the account.
       </p>
+
+      <p>
+        You may remove local application
+        data through your Android device
+        settings or by uninstalling
+        the application.
+      </p>
+
+      <p>
+        Clearing device data and deleting
+        a Firebase cloud account are
+        separate operations.
+      </p>
+
     </section>
 
-    <section>
+    <!-- DATA-ONLY REQUESTS -->
+
+    <section id="data-requests">
+
+      <h2>Other Privacy Requests</h2>
+
+      <p>
+        If you have a privacy question,
+        want information about the data
+        associated with your account,
+        or want to ask whether certain
+        game data can be removed while
+        keeping your account, contact
+        Rizu Apps using the email below.
+      </p>
+
+      <p>
+        We will review your request
+        and explain which options
+        are available.
+      </p>
+
+      <p>
+        This does not guarantee that
+        every category of data can
+        be deleted independently
+        of the account.
+      </p>
+
+    </section>
+
+    <!-- PRIVACY AND THIRD PARTIES -->
+
+    <section id="privacy">
+
+      <h2>Privacy and Third-Party Services</h2>
+
+      <p>
+        Clear the Arrows uses services
+        including Google Sign-In,
+        Firebase Authentication,
+        Cloud Firestore and Google AdMob.
+      </p>
+
+      <p>
+        These services may process
+        account, gameplay, technical,
+        device and advertising information
+        as explained in our Privacy Policy.
+      </p>
+
+      <p>
+        For additional details, please read:
+      </p>
+
+      <p>
+        <a href="./privacy.html">
+          Clear the Arrows Privacy Policy
+        </a>
+      </p>
+
+      <p>
+        You can also review our
+        <a href="./terms-of-service.html">
+          Terms of Service
+        </a>.
+      </p>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
       <h2>Contact Rizu Apps</h2>
+
       <p>
-        Developer: <strong>Rizu Apps</strong><br>
-        Game: <strong>Clear the Arrows: Tap Puzzle</strong><br>
-        Android package: <code>com.tangleclear.app</code>
+        <strong>Developer:</strong>
+        Rizu Apps
       </p>
+
       <p>
-        Email:
+        <strong>Game:</strong>
+        Clear the Arrows: Tap Puzzle
+      </p>
+
+      <p>
+        <strong>Google Play package:</strong>
+        <code>com.tangleclear.app</code>
+      </p>
+
+      <p>
+        <strong>Support and privacy email:</strong>
         <a href="mailto:rizwanliaqat1@gmail.com">
           rizwanliaqat1@gmail.com
         </a>
       </p>
+
       <p>
-        Read our <a href="./privacy.html">Privacy Policy</a>
-        for information about Firebase, advertising and
-        data handling.
+        <strong>Google Play listing:</strong>
+        <a href="https://play.google.com/store/apps/details?id=com.tangleclear.app">
+          Clear the Arrows on Google Play
+        </a>
       </p>
+
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; 2026 Rizu Apps. All rights reserved.</p>
-    <a href="./index.html">Account Deletion</a> |
-    <a href="./privacy.html">Privacy Policy</a>
+
+    <p>
+      &copy; 2026 Rizu Apps.
+      All rights reserved.
+    </p>
+
+    <nav aria-label="Footer navigation">
+
+      <a href="./index.html" aria-current="page">
+        Account Deletion
+      </a>
+
+      <a href="./privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="./terms-of-service.html">
+        Terms of Service
+      </a>
+
+    </nav>
+
   </footer>
+
 </body>
 </html>
